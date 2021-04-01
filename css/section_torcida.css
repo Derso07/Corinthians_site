@@ -1,0 +1,28 @@
+.fundo-torcida{
+    background-image: url(../img/torcida.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+#canto{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 30px;
+    width: 700px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    margin: 0 auto;
+    top: -450px;
+}
+
+#canto::after{
+    content: '';
+    display: flex;
+    height: 4px;
+    width: 100px;
+    box-shadow: 0 3px #fff;
+    margin: 0 auto;
+    margin-top: 15px;
+}

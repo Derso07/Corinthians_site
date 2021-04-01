@@ -1,0 +1,1 @@
+Um projeto pessoal, no qual coloco em prática HTML, CSS e JS, utilizando bastante flexbox, manipulação no DOM e alguns conceitos de UX. Basta acessar o link.
