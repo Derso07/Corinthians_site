@@ -1,0 +1,74 @@
+.container {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.container h1{
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-top: -80px;
+    margin-bottom: 40px;
+}
+
+.container h1::after{
+    content: '';
+    height: 4px;
+    width: 60px;
+    display: flex;
+    box-shadow: 0 4px #000;
+}
+.anos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    width: 60%;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-left: 20px;
+    border-bottom: solid #000;
+}
+
+.anos h2{
+    font-family: 'Roboto Mono', monospace;
+    margin-left:20px;
+}
+
+.anos a{
+    padding: 10px;
+    box-shadow: 2px -2px 0 1px #000 inset;
+    border: solid transparent;
+    border-width: 0 0 2px 2px;
+    transform: rotate(135deg);
+    cursor: pointer;
+}
+
+.historia {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: auto;
+    width: auto;
+    border-radius: 5px;
+    background-color: #fff;
+    margin:10px 0 20px 20px;
+    padding-bottom: 10px;
+}
+
+.historia p,span{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-family: 'Roboto Condensed', monospace;
+    letter-spacing: 2px;
+    line-height: 25px;
+    margin: 20px 0 0 20px;
+    
+}
+
+.historia span{
+    font-weight: bold;
+}

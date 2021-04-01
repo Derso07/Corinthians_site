@@ -5,7 +5,7 @@ header{
 }
 
 .fundo{
-    width: 960px;
+    width: 80%;
     height: 100px;
     background-color: #000;
     margin: 0 auto;
@@ -22,7 +22,7 @@ header{
 .mini-escudos img{
     width: 25px;
     width: 25px;
-    margin-right: 10px;
+    margin-left: 15px;
 }
 .escudo{
     display: flex;
@@ -40,12 +40,14 @@ header{
 .menu {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     flex: 1;
 }
 
 .menu ul{
     display: flex;
     list-style: none;
+    padding-inline-start: 0;
 }
 
 .menu ul li{
@@ -55,5 +57,5 @@ header{
     font-weight: bold;
     text-transform: capitalize;
     font-size: 20px;
-    margin: 0 20px;
+    margin-right: 20px;
 }
