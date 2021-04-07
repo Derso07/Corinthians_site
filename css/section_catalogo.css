@@ -1,0 +1,13 @@
+.catalogo{
+    width: 80%;
+    height: 300px;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.catalogo img{
+    width: 500px;
+    height: inherit;
+    margin: 0 15px 0 15px;
+}
