@@ -24,13 +24,13 @@ header{
     width: 25px;
     margin-left: 15px;
 }
-.escudo{
+.escudo-principal{
     display: flex;
     justify-content: center;
     flex: 1;
 }
 
-.escudo img{
+.escudo-principal img{
     width: 250px;
     height: 150px;
     position: relative;
