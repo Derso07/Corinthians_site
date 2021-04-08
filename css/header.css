@@ -40,8 +40,6 @@ header{
 .menu {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    flex: 1;
 }
 
 .menu ul{
@@ -58,4 +56,9 @@ header{
     text-transform: capitalize;
     font-size: 20px;
     margin-right: 20px;
+    
+}
+
+.menu ul li:hover{
+    box-shadow: 0 4px 0 #fff;
 }
