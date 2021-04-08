@@ -6,19 +6,22 @@
 .escudos{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     width: auto;
     height: auto;
     margin-left: 20px;
+    margin-bottom: 20px;
 }
 
 .escudo{
     display: flex;
     flex-direction: column;
+    width: 40%;
     margin-right: 15px;
+    margin-bottom: 20px;
     border: 1px solid #cacaca;
     border-radius: 10px;
     cursor: pointer;
-    flex: 2 1 auto;
 }
 
 .escudo img{
@@ -46,6 +49,6 @@
     padding: 15px;
 }
 
-.escudo:hover{
-    
+.escudos .escudo:last-child{
+    margin: 0 auto;
 }
