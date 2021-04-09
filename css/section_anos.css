@@ -44,10 +44,11 @@
     border-width: 0 0 2px 2px;
     transform: rotate(135deg);
     cursor: pointer;
+    transition: transform 0.5s;
 }
 
 .historia {
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     align-items: center;
     height: auto;
@@ -57,6 +58,7 @@
     margin:10px 0 20px 20px;
     padding-bottom: 10px;
 }
+
 
 .historia p,span{
     margin-block-start: 0;
@@ -72,4 +74,26 @@
 
 .historia span{
     font-weight: bold;
+}
+
+.ativo a{
+    transform: rotate(315deg);
+    transition: transform 0.5s;
+}
+
+.ativo.historia{
+    display: flex;
+    animation: slideDown .5s forwards;
+}
+
+@keyframes slideDown{
+    from{
+        max-height: 0;
+        opacity: 0;
+    }
+
+    to{
+        max-height: 1000px;
+        opacity: 1;
+    }
 }

@@ -21,9 +21,7 @@
     margin-right: 15px;
     margin-bottom: 30px;
     margin-top: 0;
-    border: 1px solid #cacaca;
     border-radius: 10px;
-    cursor: pointer;
     box-shadow: 2px 1px 15px #000;
     transition: margin-top 0.3s;
 }
