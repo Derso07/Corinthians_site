@@ -1,23 +1,6 @@
-//historia.js
-function initList(){
-    const accordionList = document.querySelectorAll('[data-historia] .anos');
-    const activeClass = 'ativo';
-    if(accordionList.length){
-        accordionList[0].classList.add(activeClass);
-        accordionList[0].nextElementSibling.classList.add(activeClass);
+import initscrollSuave from './modules/scroll-suave.js';
+import initList from './modules/historia.js';
 
-
-        function activeAccordion(event){
-            this.classList.toggle(activeClass);
-            this.nextElementSibling.classList.toggle(activeClass);
-        }
-
-        accordionList.forEach((item)=>{
-            item.addEventListener('click',activeAccordion);
-    })
-    }
-}
+initscrollSuave();
 initList();
-
-//scroll-interno.js
 
