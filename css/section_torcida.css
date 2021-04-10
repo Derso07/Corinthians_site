@@ -14,7 +14,20 @@
     color: #fff;
     position: relative;
     margin: 0 auto;
-    top: -450px;
+    top: -400px;
+    animation: cancao 3s forwards;
+}
+
+@keyframes cancao{
+    from{
+        opacity: 0;
+        transform: translate3d(0,0,0);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate3d(0, -30px, 0);
+    }
 }
 
 #canto::after{
