@@ -4,6 +4,11 @@ header{
     background-color: #000;
     position: fixed;
     z-index: 1000;
+    transition: height 1s ease;
+}
+.active {
+    height: 70px;
+    transition: height 1s ease;
 }
 
 .fundo{
@@ -13,7 +18,14 @@ header{
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    transition: height 1s ease;
 }
+
+.active .fundo{
+    height: 70px;
+    transition: height 1s ease;
+}
+
 
 .mini-escudos{
     display: flex;
@@ -37,6 +49,12 @@ header{
     height: 150px;
     position: relative;
     top: 20px;
+    transition: height 1s ease;
+}
+
+.active .escudo-principal img{
+    height: 100px;
+    transition: height 1s ease;
 }
 
 a{
@@ -78,6 +96,6 @@ a{
 
 .menu ul a.ativo{
     border-bottom: 4px solid #fff;
-    padding-bottom: 35px;
-    padding-top: 35px;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
