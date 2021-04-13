@@ -20,8 +20,13 @@ footer div h3{
     right: 100px;
     border-radius: 4px;
     background: rgba(128, 128, 128, .7);
-    display: flex;
+    display: none;
     opacity: 1;
+}
+
+.retorno a{
+    width: 50px;
+    height: 50px;
 }
 
 .retorno a::before{
@@ -35,4 +40,9 @@ footer div h3{
     justify-content: center;
     margin: auto 11px;
     margin-top: 12.5px;
+    cursor: pointer;
+}
+
+.retorno.btn{
+    display: flex;
 }
