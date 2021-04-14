@@ -20,8 +20,21 @@ footer div h3{
     right: 100px;
     border-radius: 4px;
     background: rgba(128, 128, 128, .7);
-    display: none;
-    opacity: 1;
+    display: flex;
+    opacity: 0;
+    animation: botaoDown .5s forwards;
+}
+
+@keyframes botaoDown{
+    from{
+        opacity: 1;
+        transform: translate3d(0,-5px,0);
+    }
+
+    to{
+        opacity: 0;
+        transform: translate3d(0,0,0);
+    }
 }
 
 .retorno a{
@@ -45,4 +58,17 @@ footer div h3{
 
 .retorno.btn{
     display: flex;
+    animation: botaoUp .5s forwards;
+}
+
+@keyframes botaoUp{
+    from{
+        opacity: 0;
+        transform: translate3d(0,0,0);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate3d(0,-5px,0);
+    }
 }

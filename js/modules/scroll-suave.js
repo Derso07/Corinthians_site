@@ -14,7 +14,6 @@ export default function initscrollSuave(){
 
     linksInternos.forEach((link)=>{
         link.addEventListener('click',scrollToSection);
-
     })
 
 }
