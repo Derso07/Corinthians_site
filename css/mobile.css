@@ -5,3 +5,150 @@
     }
 
 }
+
+@media only screen and (min-width:651px) and (max-width:1023px){
+
+    .escudo{
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width:650px){
+
+    [data-menu="botao"]{
+        display: flex;
+        border: none;
+        color: #fff;
+        position: fixed;
+        padding: 10px 20px 15px 3px;
+        background: local;
+        align-items: center;
+        text-transform: uppercase;
+        font-size: 11px;
+        font-family: 'Roboto Condensed', sans-serif;
+        cursor: pointer;
+    }
+
+    [data-menu="botao"]::before{
+        content: '';
+        display: inline-block;
+        height: 2px;
+        width: 17px;
+        margin-right: 5px;
+        background: #fff;
+        box-shadow: 0 7px #fff, 0 -7px #fff;
+        transition: transform .3s;
+        cursor: pointer;
+    }
+
+    [data-menu="botao"].ativar::before{
+        transform: rotate(90deg);
+    }
+
+    .menu ul{
+        display: none;
+    }
+
+    .menu ul.ativar{
+        display: block;
+        width: 202.41px;
+        height: 170px;
+        margin-top: 200px;
+        background-color: #000;
+        border-radius: 0 0 10px 10px;
+        animation: menuDown .5s forwards;
+    }
+
+    @keyframes menuDown {
+        from{
+            transform:translate3d(0,0,0) ;
+        }
+
+        to{
+            transform: translate3d(0,20px,0);
+        }
+    }
+
+    .menu ul li{
+        width: 150px;
+        margin: 35px 0 0 15px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #fff;
+    }
+
+
+    .escudo-principal img{
+        width: 100px;
+        height: 100px;
+        top: 0;
+        transition: height 1s ease;
+    }
+
+    .active .escudo-principal img{
+        height: 70px;
+        transition: height 1s ease;
+    }
+
+    .mini-escudos{
+        display: none;
+    }
+
+    #canto{
+        font-size: 15px;
+        width: 450px;
+        top: -300px;
+    }
+
+    .menu ul a:hover{
+        border-bottom: none;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+    
+    .container h1{
+        margin-top: -45px;
+    }
+
+    .anos{
+        width: 100%;
+    }
+
+    .escudo{
+        width: 100%;
+    }
+
+    .escudo img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .escudo p{
+        font-size: 15px;
+    }
+
+    .retorno{
+        right: 50px;
+        width: 35px;
+        height: 40px;
+    }
+
+    .retorno a{
+        width: 35px;
+        height: 35px;
+    }
+
+    .retorno a::before{
+        content: "";
+        width: 30px;
+        height: 30px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid #fff;
+        align-items: center;
+        justify-content: center;
+        margin: auto 11px;
+        margin-top: 12.5px;
+        cursor: pointer;
+    }
+
+}
