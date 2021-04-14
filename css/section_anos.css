@@ -29,7 +29,7 @@
     border-radius: 5px;
     background-color: #fff;
     margin-left: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     border-bottom: solid #000;
 }
 
@@ -49,16 +49,30 @@
 }
 
 .historia {
-    display: none;
+    display: flex;
     flex-wrap: wrap;
     align-items: center;
     height: auto;
     width: auto;
     border-radius: 5px;
     background-color: #fff;
-    margin:10px 0 20px 20px;
+    margin:0 0 20px 20px;
     padding-bottom: 10px;
+    animation: slideUp .5s forwards;
 }
+
+@keyframes slideUp{
+    from{
+        max-height: 1000px;
+        opacity: 1;
+    }
+
+    to{
+        max-height: 0;
+        opacity: 0;
+    }
+}
+
 
 
 .historia p,span{
@@ -69,7 +83,7 @@
     font-family: 'Roboto Condensed', monospace;
     letter-spacing: 2px;
     line-height: 25px;
-    margin: 20px 0 0 20px;
+    margin-left: 20px;
     
 }
 
