@@ -6,8 +6,18 @@
     margin-bottom: 20px;
 }
 
-.catalogo img{
-    width: 500px;
+.catalogo .slide{
+    display: flex;
+}
+
+.catalogo .slide div{
+    width:auto;
+    height: 300px;
+}
+
+.catalogo .slide div img{
+    display: block;
+    max-width: 500px;
     height: inherit;
     margin: 0 15px 0 15px;
     z-index: 100;
