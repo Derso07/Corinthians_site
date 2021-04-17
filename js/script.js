@@ -11,6 +11,9 @@ slide.init();
 
 console.log(slide);
 
+slide.changeSlide(3);
+
+
 initHeader();
 initScrollInterno();
 initscrollSuave();
