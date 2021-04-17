@@ -13,6 +13,7 @@
 .catalogo .slide div{
     width:auto;
     height: 300px;
+    z-index: 1000;
 }
 
 .catalogo .slide div img{
@@ -20,5 +21,4 @@
     max-width: 500px;
     height: inherit;
     margin: 0 15px 0 15px;
-    z-index: 100;
 }
