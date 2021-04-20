@@ -9,10 +9,9 @@ import initMenu from './modules/menu-mobile.js';
 const slide = new Slide('.slide', '.catalogo');
 slide.init();
 
-console.log(slide);
 
 slide.changeSlide(0);
-
+slide.activePrevSlide();
 
 initHeader();
 initScrollInterno();

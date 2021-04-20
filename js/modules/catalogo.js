@@ -1,9 +1,12 @@
+import debunce from '../debounce.js';
+
 export default class Slide{
   
         constructor(slide, catalogo){
             this.slide = document.querySelector('.slide');
             this.catalogo = document.querySelector('.catalogo');
             this.dist = { finalPosition: 0, startX: 0, movement: 0 } 
+            this.activeClass = 'active';
         }
 
         transition(active){
@@ -44,11 +47,11 @@ export default class Slide{
         }
 
         ondEnd(event){
-            const moveType = (event.type === 'mouseup') ? 'mousemove' : 'touchmove';
-            this.catalogo.removeEventListener(moveType, this.onMove);
-            this.dist.finalPosition = this.dist.movePosition;
-            this.transition(true);
-            this.changeSlideOnEnd();
+            const movetype = (event.type === 'mouseup') ? 'mousemove' : 'touchmove';
+                this.catalogo.removeEventListener(movetype, this.onMove);
+                this.dist.finalPosition = this.dist.movePosition;
+                this.transition(true);
+                this.changeSlideOnEnd();
         }
 
         changeSlideOnEnd(){
@@ -59,8 +62,6 @@ export default class Slide{
             }else{
                 this.changeSlide(this.index.active);
             }
-
-            console.log(this.dist.movement);
         }
 
         addSlideEvents(){
@@ -68,12 +69,6 @@ export default class Slide{
             this.catalogo.addEventListener('touchstart', this.onStart);
             this.catalogo.addEventListener('mouseup', this.ondEnd);
             this.catalogo.addEventListener('touchend', this.ondEnd);
-        }
-
-        bindEvents(){
-            this.onStart = this.onStart.bind(this);
-            this.onMove = this.onMove.bind(this);
-            this.ondEnd = this.ondEnd.bind(this);
         }
 
         // Slides config
@@ -105,21 +100,48 @@ export default class Slide{
             this.moveSlide(activeSlide.position);
             this.slidesIndexNav(index);
             this.dist.finalPosition = activeSlide.position;
+            this.changeActiveClass();
+        }
+
+        changeActiveClass(){
+            this.slideArray.forEach(item => item.element.classList.remove(this.activeClass));
+            this.slideArray[this.index.active].element.classList.add(this.activeClass);
         }
 
         activePrevSlide(){
-            if(this.index.prev !== undefined)this.changeSlide(this.index.prev);
+            if(this.index.prev !== undefined) this.changeSlide(this.index.prev);
         }
 
         activeNextSlide(){
-            if(this.index.next !== undefined)this.changeSlide(this.index.next);
+            if(this.index.next !== undefined) this.changeSlide(this.index.next);
+        }
+
+        onResize(){
+            console.log('teste');
+            setTimeout(()=>{
+            this.slidesConfig();
+            this.changeSlide(this.index.active);
+            },1000)
+        }
+
+        addReziseEvent(){
+            window.addEventListener('rezise', this.onResize);
+        }
+
+        bindEvents(){
+            this.onStart = this.onStart.bind(this);
+            this.onMove = this.onMove.bind(this);
+            this.ondEnd = this.ondEnd.bind(this);
+
+            this.onResize = debunce(this.onResize.bind(this), 200);
         }
 
         init(){
             this.bindEvents();
             this.transition(true);
             this.addSlideEvents();
-            this.slidesConfig();       
+            this.slidesConfig();  
+            this.addReziseEvent();     
                 return this;
             }
         }

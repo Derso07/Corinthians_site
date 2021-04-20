@@ -8,17 +8,33 @@
 
 .catalogo .slide{
     display: flex;
+    width: 100%;
 }
 
 .catalogo .slide div{
     width:auto;
     height: 300px;
     z-index: 1000;
+    opacity: .8;
+    transform: scale(.8);
+    transition: transform .4s;
+}
+
+.slide:hover{
+    will-change: transform;
 }
 
 .catalogo .slide div img{
     display: block;
     max-width: 500px;
-    height: inherit;
+    height: 300px;
     margin: 0 15px 0 15px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,.4);
+}
+
+.catalogo .slide div.active{
+    opacity: 1;
+    transform: scale(1);
 }
