@@ -16,6 +16,7 @@
     margin: 0 auto;
     top: -400px;
     animation: cancao 3s forwards;
+
 }
 
 @keyframes cancao{
