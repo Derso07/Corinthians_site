@@ -112,7 +112,7 @@
     }
     
     .container h1{
-        margin-top: -45px;
+        margin-top: -25px;
     }
 
     .anos{
@@ -157,4 +157,16 @@
         cursor: pointer;
     }
 
+    .catalogo .slide div img{
+        height: 200px;
+        margin-bottom: 0;
+    }
+    .titulo-escudo{
+        padding-top: 0 !important;
+    }
+
+    .catalogo .slide div.active{
+        width: inherit;
+        height: inherit;
+    }
 }

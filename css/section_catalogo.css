@@ -1,3 +1,18 @@
+section .galeria-fotos{
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding-top: 100px;
+}
+
+section .galeria-fotos::after{
+    content: '';
+    height: 4px;
+    width: 60px;
+    display: flex;
+    box-shadow: 0 4px #000;
+}
+
 .catalogo{
     width: 80%;
     height: 300px;
@@ -12,7 +27,9 @@
 }
 
 .catalogo .slide div{
-    width:auto;
+    flex-shrink: 0;
+    max-width: 400px;
+    width:60vw;
     height: 300px;
     z-index: 1000;
     opacity: .8;
@@ -26,7 +43,8 @@
 
 .catalogo .slide div img{
     display: block;
-    max-width: 500px;
+    width: 100%;
+    max-width: 400px;
     height: 300px;
     margin: 0 15px 0 15px;
     border-radius: 4px;
